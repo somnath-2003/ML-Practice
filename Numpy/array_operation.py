@@ -73,3 +73,45 @@ flat_view = arr11.ravel()
 flat_view[0] = 99
 print(flat_view)  # [2,5,6,7,3,1]
 print(arr11)        # [[99,5,6] [ 7,3,1]] 
+
+
+
+
+
+
+
+
+# Base array
+arr12 = np.array([[10, 20, 30],
+                [40, 50, 60],
+                [70, 80, 90]])
+
+print("Original array:\n", arr12)
+
+# Indexing 
+# arr12[0] = first row
+print("\nFirst row:", arr12[0])        
+
+# arr12[:, 1] = second column
+print("Second column:", arr12[:, 1])   
+
+# arr12[1, 2] -> element at row 2, col 3
+print("Element at (2,3):", arr12[1, 2])  
+
+# ----- Slicing -----
+# Syntax: arr12[row_start:row_end:row_step, col_start:col_end:col_step]
+# Example: take first 2 rows (0:2) and columns 1-2 (1:3)
+print("\nSubarray (rows 0-1, cols 1-2):\n", arr12[0:2, 1:3])  
+
+# ----- Reversing -----
+# arr12[::-1] -> reverse rows
+print("\nReverse rows:\n", arr12[::-1])
+
+# arr12[:, ::-1] -> reverse columns
+print("Reverse columns:\n", arr12[:, ::-1])
+
+# arr12[::-1, ::-1] -> reverse rows & columns (180° rotation)
+print("Reverse both (180° rotation):\n", arr12[::-1, ::-1])
+
+# Extra slicing example: step slicing
+print("\nEvery 2nd element in row 1:", arr12[0, ::2])  
