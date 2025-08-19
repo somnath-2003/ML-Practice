@@ -115,3 +115,61 @@ print("Reverse both (180° rotation):\n", arr12[::-1, ::-1])
 
 # Extra slicing example: step slicing
 print("\nEvery 2nd element in row 1:", arr12[0, ::2])  
+
+
+
+
+#----Numpy arithmatics------
+
+arr13=np.array([[1,2,3],
+                [4,5,6],
+                [7,8,9]])
+print("sum of all the elements of the numpy  array: ",arr13.sum())
+
+print("adding 10 to every element: ",arr13 +10)
+print("subtracting 10 to every element: ",arr13 -10)
+print("multiplying 10 to every element: ",arr13 *10)
+print("Dividing 10 to every element: ",arr13 /10)
+
+arr14=np.array([[9,8,7],[6,5,4],[3,2,1]])
+print("adding arr13 and arr14 elementwise :\n",arr13+arr14)
+print("multipling arr13 and arr14 element by corresponding element :\n",arr13*arr14)#it is not matrix multiplication
+#matrix multiplication
+print("matrix multiplication of arr13 and  arr14 :\n",arr13 @ arr14)# or you can use np.matmul(arr13,arr14)
+print("matrix multiplication of arr13 and  arr14 :\n",np.matmul(arr13,arr14))
+
+
+#-----Aggregates------ WITHOUT AXIS-----------
+print("sum of all the elements of the  array:",np.sum(arr13))
+print("mean of arr3 :",np.mean(arr13))
+print("standard deviation of arr13 : ",np.std(arr13))
+
+#Find max and Min in Araay
+print("Maximum element of arr13  :",np.max(arr13))
+print("Minimum element of arr13 :",np.min(arr13))
+#Find max and min between two arrays
+print("array of Maximum element between arr13 and arr14 :",np.maximum(arr13,arr14))
+
+A = np.array([[[1,2],[3,4]], [[5,6],[7,8]]])  # shape (2,2,2)
+B = np.array([[[9,8],[7,6]], [[5,4],[3,2]]])  # shape (2,2,2)
+
+print(A + B)   # adds element by element
+
+#----Aggregates------ WITH  AXIS (direction of aggregation)--------
+print("sum of all the elements of the  array:",np.sum(arr13))
+print("sum of  columns :",np.sum(arr13,axis=0))
+print("sum of  rows :",np.sum(arr13,axis=1))
+print("mean of arr13 columns :",np.mean(arr13,axis=0))
+print("mean of arr13 rows :",np.mean(arr13,axis=1))
+print("standard deviation of arr13 columns : ",np.std(arr13,axis=0))
+print("standard deviation of rows :",np.std(arr13,axis=1))
+
+#Find max and Min in Araay
+print("Maximum element of each columns :",np.max(arr13,axis=0))
+print("Maximum element of each rows :",np.max(arr13,axis=1))
+print("Minimum element of each colums  :",np.min(arr13,axis=0))
+print("Minimum element of each rows  :",np.min(arr13,axis=1))
+
+
+
+
