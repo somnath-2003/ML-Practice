@@ -74,6 +74,18 @@ flat_view[0] = 99
 print(flat_view)  # [2,5,6,7,3,1]
 print(arr11)        # [[99,5,6] [ 7,3,1]] 
 
+#Expand dimentions
+newarr = np.array([1,2,3])
+np.expand_dims(newarr, axis=0).shape  # (1,3)row vector
+np.expand_dims(newarr, axis=1).shape  # (3,1)column vector
+
+#Squeeze dimentions
+newarr1 = np.array([[[1,2,3]]])   # shape (1,1,3)
+print("Original shape:", newarr1.shape)
+
+squeezed = np.squeeze(newarr1)
+print("After squeeze shape:", squeezed.shape)  # (3,)
+
 
 
 
